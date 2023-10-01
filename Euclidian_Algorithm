@@ -1,0 +1,22 @@
+public class Euclidian_alg{
+    public static void main(int a, int b) {
+
+        
+        System.out.println("\nFinding: gcd(" + a + ", " + b + ")\n");
+        int step_counter = 1;
+        while (b > 0) {
+            int h = 0;
+            System.out.println("Step " + step_counter + ":");
+            System.out.println(a + " = " +  b + " * " + a/b + " + " + a % b);
+            h = b;
+            b = a % b;
+            a = h;
+
+            System.out.println("\ngcd(" + a + ", " + b + ")\n");
+            step_counter++;
+        }
+
+        System.out.println("\n The gcd is " + a +  "\n -------------- ");
+    }
+
+}
